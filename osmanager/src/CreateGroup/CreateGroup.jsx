@@ -168,7 +168,7 @@ export default function SignInSide() {
 
                         <Box textAlign="center">
                             <Button variant="outlined" color="secondary" style={{width:"100%",justifyContent:"center"}} sx={{ mt: 3, mb: 2 }} startIcon={<GroupIcon />}>
-                                <Link className="link" to="/groups"> View Groups </Link>
+                                <Link className="link" to="/ViewGroup"> View Groups </Link>
                             </Button>
                         </Box>
 
