@@ -1,5 +1,7 @@
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 export default class SignUp extends Component {
   render() {
     return (
@@ -34,9 +36,9 @@ export default class SignUp extends Component {
           />
         </div>
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+         <Link to="/sign-in"> <button type="submit" className="btn btn-primary">
             Sign Up
-          </button>
+          </button></Link>
         </div>
         <p className="forgot-password text-right">
           Already registered <a href="/sign-in">sign in?</a>

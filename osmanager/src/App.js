@@ -1,10 +1,15 @@
-import React from 'react'
+
+import react from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Login from './components/login'
-import SignUp from './components/signup'
+import SignUp from './components/signup';
+import CreateGroup from './CreateGroup/CreateGroup';
+import ViewGroup from './ViewGroup/ViewGroup'
+
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -17,27 +22,27 @@ function App() {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link className="nav-link" to={'/sign-in'}>
-                    Home 
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/creategroup'}>
+                    Create Group
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  {/* <Link className="nav-link" to={'/projects'}>
+                    Projects 
+                  </Link> */}
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/sign-in'}>
+                    Login
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to={'/sign-up'}>
-                  Create Group                  
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={'/sign-up'}>
-                    Write 
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={'/sign-up'}>
-                    Login 
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={'/sign-up'}>
-                    Signup  
+                    Signup
                   </Link>
                 </li>
               </ul>
@@ -50,6 +55,9 @@ function App() {
               <Route exact path="/" element={<Login />} />
               <Route path="/sign-in" element={<Login />} />
               <Route path="/sign-up" element={<SignUp />} />
+              <Route path="/CreateGroup" element={<CreateGroup />} />
+              <Route path="/ViewGroup" element={<ViewGroup />} />
+              <Route path="/home" element={<home />} />
             </Routes>
           </div>
         </div>
